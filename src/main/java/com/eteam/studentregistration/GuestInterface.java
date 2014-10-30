@@ -3,6 +3,7 @@
 
      Provides guest-level access to the system
 */
+package com.team.studentregistration;
 import java.util.List;
 import java.util.Scanner;
 

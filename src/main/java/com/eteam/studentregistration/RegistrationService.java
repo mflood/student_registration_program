@@ -7,6 +7,7 @@
      and provides an interface to find users signed up for sessions
      and sessions signed up to for a user
 */
+package com.team.studentregistration;
 import java.util.TreeMap;
 import java.util.List;
 import java.util.ArrayList;

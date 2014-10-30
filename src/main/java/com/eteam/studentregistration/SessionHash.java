@@ -5,6 +5,7 @@
      go from course/session to the course:::session hash used
      by the registration service
 */
+package com.team.studentregistration;
 
 public class SessionHash
 {

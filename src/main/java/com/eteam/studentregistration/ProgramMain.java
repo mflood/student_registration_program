@@ -6,6 +6,7 @@
      Prompts the user for credentials,
      And picks and runs an approriate UserInterface implementation
 */
+package com.team.studentregistration;
 
 public class ProgramMain
 {

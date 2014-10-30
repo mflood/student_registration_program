@@ -3,6 +3,7 @@
 
      Provides student-level access to the system
 */
+package com.team.studentregistration;
 import java.util.List;
 
 public class StudentInterface extends UserInterface

@@ -4,6 +4,7 @@
      Represents a system user,
      which could be a student or an administrator
 */
+package com.team.studentregistration;
 import java.util.List;
 import java.io.Serializable;
 

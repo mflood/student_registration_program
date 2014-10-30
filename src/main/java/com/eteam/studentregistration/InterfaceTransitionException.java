@@ -9,6 +9,7 @@
      Exception to determine which interface to provide
 
 */
+package com.team.studentregistration;
 import java.lang.Exception;
 
 public class InterfaceTransitionException extends Exception
