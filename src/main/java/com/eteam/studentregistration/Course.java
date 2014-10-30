@@ -125,7 +125,7 @@ public class Course implements java.io.Serializable, Comparable<Course>
           uses the RegistrationService to enumerate the students
           that are registered for the session
      */
-     public String sessionListToString(RegistrationService registrationService)
+     public String sessionListToString(RegistrationService registrationService, AccountManager accountManager)
      {
           String returnValue = "";
           if(this.courseSessionList.size() == 0)
@@ -139,9 +139,11 @@ public class Course implements java.io.Serializable, Comparable<Course>
                     returnValue += "\n   " + courseSession;
                     List<String> studentList = registrationService.getStudents(this.courseId, courseSession.getSessionCode());
                     returnValue += " Enrolled: " + studentList.size();
+                    Account account;
                     for (String username: studentList)
                     {
-                         returnValue += "\n       " + username;
+                         account = accountManager.getAccount(username);
+                         returnValue += "\n       " + account;
                     }
                }
           }

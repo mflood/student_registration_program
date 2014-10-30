@@ -110,7 +110,7 @@ public class AdminInterface extends UserInterface
           for (Course course : courseList)
           {
                System.out.println(course);
-               System.out.println(course.sessionListToString(this.registrationService));
+               System.out.println(course.sessionListToString(this.registrationService, this.accountManager));
           }
      }
 

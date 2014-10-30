@@ -59,16 +59,12 @@ public class Account implements java.io.Serializable
      @Override
      public String toString()
      {
-          String returnValue = "Account Username: "
-                              + this.username
-                              + " Name: "
-                              + this.firstname
-                              + " "
-                              + this.lastname
-                              + " password: "
-                              + this.password
-                              + " role: "
-                              + this.role;
+          String returnValue = String.format("%-9s %-10.8s %-10.8s %15s:%-15s",
+                                             "(" + this.role + ")",
+                                             this.firstname,
+                                             this.lastname,
+                                             this.username,
+                                             this.password);
           return returnValue;
      }
 }
