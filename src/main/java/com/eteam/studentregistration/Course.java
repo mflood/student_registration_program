@@ -3,7 +3,7 @@
 
      Represents a course and the sessions that are available
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.Serializable;

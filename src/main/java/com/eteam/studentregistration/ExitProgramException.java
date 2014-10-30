@@ -6,7 +6,7 @@
      the application
 
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.lang.Exception;
 
 public class ExitProgramException extends Exception

@@ -5,7 +5,7 @@
      It creates, stores, and loads all Courses
      and provides an interface to find Courses by CourseId
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.util.TreeMap;
 import java.util.ArrayList;
 import java.util.List;

@@ -5,7 +5,7 @@
      when someone tries to create a course
      that already exists (course id is taken)
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.lang.Exception;
 
 public class CourseAlreadyExistsException extends Exception

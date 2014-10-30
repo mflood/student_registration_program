@@ -3,7 +3,7 @@
 
      Puts sample data into the system
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;

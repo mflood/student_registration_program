@@ -5,7 +5,7 @@
      It creates, stores, and loads all Accounts
      and provides an interface to find accounts by username
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;

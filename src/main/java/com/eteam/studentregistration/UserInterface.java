@@ -3,7 +3,7 @@
 
      Abstract class for providing access to the system
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;

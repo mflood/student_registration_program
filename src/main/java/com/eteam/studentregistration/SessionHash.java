@@ -5,7 +5,7 @@
      go from course/session to the course:::session hash used
      by the registration service
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 
 public class SessionHash
 {

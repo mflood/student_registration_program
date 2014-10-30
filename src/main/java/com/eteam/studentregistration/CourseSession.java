@@ -3,7 +3,7 @@
 
      Represents a session of a Course.
 */
-package com.team.studentregistration;
+package com.eteam.studentregistration;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.io.Serializable;
