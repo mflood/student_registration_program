@@ -74,7 +74,7 @@ public class GuestInterface extends UserInterface
      /**
           Allows the user to create a new account
      */
-     private void createAccount() throws InterfaceFinishedException
+     private void createAccount()
      {
           System.out.println("----- let's make an account -----");
 
@@ -85,10 +85,7 @@ public class GuestInterface extends UserInterface
           try
           {
                this.accountManager.createAccount(username, firstname, lastname, password, "student");
-               System.out.println("Your account has been created, please re-run the program and log into your account");
-
-               // This let's us jump out of the run method effectively
-               throw new InterfaceFinishedException("Account created");
+               System.out.println("Your account has been created, type 'login' to log into your account.");
           }
           catch (AccountAlreadyExistsException e)
           {
@@ -135,16 +132,7 @@ public class GuestInterface extends UserInterface
                }
                else if(command.equals("new"))
                {
-                    try
-                    {
-                         createAccount();
-                    }
-                    catch (InterfaceFinishedException e)
-                    {
-                         // exit the loop
-                         break;
-                    }
-
+                    createAccount();
                }
                else if(command.equals("login"))
                {
