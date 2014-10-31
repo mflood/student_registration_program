@@ -91,13 +91,13 @@ public class AccountManager
           try
           {
                System.out.println("Creating admin account with username 'admin' and password 'password'");
-               createAccount("admin", "-", "", "password", "admin");
+               createAccount("admin", "-", "-", "password", "admin");
 
                // Create guest account
                // Empty password means you cannot log into the account
                // Presence of account means no one can create an account with username of guest
                System.out.println("Creating guest account with username 'admin' and password ''");
-               createAccount("guest", "-", "", "password", "admin");
+               createAccount("guest", "-", "-", "", "");
           }
           catch (AccountAlreadyExistsException e)
           {
