@@ -119,11 +119,11 @@ public class SampleDataLoader
                          }
                     }
                }
-
+               System.out.println("** finishined loading sample data");
           }
           catch (CourseAlreadyExistsException e)
           {
-               System.out.println("looks like sample data is already loaded");
+               System.out.println("** looks like sample data is already loaded");
           }
      }
 }
