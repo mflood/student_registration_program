@@ -43,7 +43,7 @@ public class CourseManager
           try
           {
                FileInputStream fileIn = new FileInputStream(this.courseFilePath);
-               System.out.println("Loading course data from " + this.courseFilePath);
+               System.out.println("** Loading course data from " + this.courseFilePath);
                ObjectInputStream in = new ObjectInputStream(fileIn);
                @SuppressWarnings("unchecked")
                TreeMap<String, Course> savedCourseMap = (TreeMap<String, Course>) in.readObject();
@@ -53,7 +53,7 @@ public class CourseManager
           }
           catch(java.io.FileNotFoundException e)
           {
-               System.out.println("Initializing course data file: " + this.courseFilePath);
+               System.out.println("** Initializing course data file: " + this.courseFilePath);
                save();
           }
           catch(IOException i)
@@ -63,7 +63,7 @@ public class CourseManager
           }
           catch(ClassNotFoundException c)
           {
-               System.out.println("HashhMap class not found");
+               System.out.println("** HashhMap class not found");
                c.printStackTrace();
                return;
           }
@@ -130,7 +130,7 @@ public class CourseManager
           Course course = this.getCourse(courseId);
           if (course == null)
           {
-               System.out.println("Could not add session: Invalid course code specified");
+               System.out.println("** Could not add session: Invalid course code specified");
                return;
           }
 

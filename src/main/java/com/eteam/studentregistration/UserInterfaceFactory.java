@@ -37,7 +37,7 @@ class UserInterfaceFactory
           }
           else
           {
-               System.out.println("Strange... Your account does not have any privileges");
+               System.out.println("** Strange... Your account does not have any privileges");
                return new GuestInterface();
           }
      }

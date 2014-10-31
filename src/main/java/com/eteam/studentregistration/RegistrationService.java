@@ -49,7 +49,7 @@ public class RegistrationService
           try
           {
                FileInputStream fileIn = new FileInputStream(this.registrationFilePath);
-               System.out.println("Loading registration data from " + this.registrationFilePath);
+               System.out.println("** Loading registration data from " + this.registrationFilePath);
                ObjectInputStream in = new ObjectInputStream(fileIn);
                @SuppressWarnings("unchecked")
                TreeMap<String, HashSet<String>> savedStudentSessionMap = (TreeMap<String, HashSet<String>>) in.readObject();
@@ -62,7 +62,7 @@ public class RegistrationService
           }
           catch(java.io.FileNotFoundException e)
           {
-               System.out.println("Initializing registration data file: " + this.registrationFilePath);
+               System.out.println("** Initializing registration data file: " + this.registrationFilePath);
                save();
           }
           catch(IOException i)
@@ -72,7 +72,7 @@ public class RegistrationService
           }
           catch(ClassNotFoundException c)
           {
-               System.out.println("HashhMap class not found");
+               System.out.println("** HashhMap class not found");
                c.printStackTrace();
                return;
           }

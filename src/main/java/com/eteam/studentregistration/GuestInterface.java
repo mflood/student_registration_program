@@ -85,11 +85,11 @@ public class GuestInterface extends UserInterface
           try
           {
                this.accountManager.createAccount(username, firstname, lastname, password, "student");
-               System.out.println("Your account has been created, type 'login' to log into your account.");
+               System.out.println("** Your account has been created, type 'login' to log into your account.");
           }
           catch (AccountAlreadyExistsException e)
           {
-               System.out.println("Sorry, an account with that name already exists");
+               System.out.println("** Sorry, an account with that name already exists");
           }
      }
 

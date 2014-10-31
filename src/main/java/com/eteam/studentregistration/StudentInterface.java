@@ -57,7 +57,7 @@ public class StudentInterface extends UserInterface
           }
           if(! found)
           {
-               System.out.println("Invalid course/session supplied");
+               System.out.println("** Invalid course/session supplied");
                return;
           }
 
@@ -77,7 +77,7 @@ public class StudentInterface extends UserInterface
           //
           if(course == null)
           {
-              System.out.println("Invalid course ID specified");
+              System.out.println("** Invalid course ID specified");
               return;
           }
 
@@ -86,7 +86,7 @@ public class StudentInterface extends UserInterface
           List <CourseSession> sessionList = course.getCourseSessions();
           if(sessionList.size() == 0)
           {
-               System.out.println("That course has no sessions");
+               System.out.println("** That course has no sessions");
                return;
           }
 
@@ -117,7 +117,7 @@ public class StudentInterface extends UserInterface
                //
                if (courseSession == null)
                {
-                    System.out.println("Invalid Session code provided");
+                    System.out.println("** Invalid Session code provided");
                     return;
                }
           }
@@ -128,7 +128,7 @@ public class StudentInterface extends UserInterface
           //
           if (currentStudents.contains(this.account.getUsername()))
           {
-              System.out.println("You are already registered for that session");
+              System.out.println("** You are already registered for that session");
                return;
           }
 
@@ -136,7 +136,7 @@ public class StudentInterface extends UserInterface
           //
           if (currentStudents.size() >= courseSession.getStudentCapacity())
           {
-               System.out.println("That course is full");
+               System.out.println("** That course is full");
                return;
           }
 
@@ -185,7 +185,7 @@ public class StudentInterface extends UserInterface
      */
      public void run() throws ExitProgramException, InterfaceTransitionException
      {
-          System.out.println("Launching Student Interface");
+          System.out.println("** Launching Student Interface");
           printUsage();
           boolean keepGoing = true;
           while(keepGoing == true)

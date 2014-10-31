@@ -44,7 +44,7 @@ public class AccountManager
           try
           {
                FileInputStream fileIn = new FileInputStream(this.accountFilePath);
-               System.out.println("Loading account data from " + this.accountFilePath);
+               System.out.println("** Loading account data from " + this.accountFilePath);
                ObjectInputStream in = new ObjectInputStream(fileIn);
                @SuppressWarnings("unchecked")
                HashMap<String, Account> savedAccountMap = (HashMap<String, Account>) in.readObject();
@@ -54,7 +54,7 @@ public class AccountManager
           }
           catch(java.io.FileNotFoundException e)
           {
-               System.out.println("Initializing account data file: " + this.accountFilePath);
+               System.out.println("** Initializing account data file: " + this.accountFilePath);
                if(this.accountMap.size() == 0) {
                     createAdminAccount();
                }
@@ -66,7 +66,7 @@ public class AccountManager
           }
           catch(ClassNotFoundException c)
           {
-               System.out.println("HashMap class not found");
+               System.out.println("** HashMap class not found");
                c.printStackTrace();
                return;
           }
@@ -90,13 +90,13 @@ public class AccountManager
      {
           try
           {
-               System.out.println("Creating admin account with username 'admin' and password 'password'");
+               System.out.println("** Creating admin account with username 'admin' and password 'password'");
                createAccount("admin", "-", "-", "password", "admin");
 
                // Create guest account
                // Empty password means you cannot log into the account
                // Presence of account means no one can create an account with username of guest
-               System.out.println("Creating guest account with username 'guest' and password ''");
+               System.out.println("** Creating guest account with username 'guest' and password ''");
                createAccount("guest", "-", "-", "", "");
           }
           catch (AccountAlreadyExistsException e)
@@ -177,10 +177,10 @@ public class AccountManager
                {
                     return account;
                }
-               System.out.println("Invalid password provided");
+               System.out.println("** Invalid password provided");
                return null;
           }
-          System.out.println("Invalid username provided");
+          System.out.println("** Invalid username provided");
           return null;
      }
 }

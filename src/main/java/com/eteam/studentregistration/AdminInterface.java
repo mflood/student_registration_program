@@ -59,7 +59,7 @@ public class AdminInterface extends UserInterface
           Course course = this.courseManager.getCourse(courseId);
           if (course != null)
           {
-               System.out.println("A course with that ID already exists");
+               System.out.println("** A course with that ID already exists");
                return;
           }
 
@@ -72,7 +72,7 @@ public class AdminInterface extends UserInterface
           }
           catch (CourseAlreadyExistsException e)
           {
-               System.out.println("A course with that ID already exists.");
+               System.out.println("** A course with that ID already exists.");
           }
      }
 
@@ -88,7 +88,7 @@ public class AdminInterface extends UserInterface
           Course course = this.courseManager.getCourse(courseId);
           if (course == null)
           {
-               System.out.println("Invalid course specified");
+               System.out.println("** Invalid course specified");
                return;
           }
 
@@ -131,7 +131,7 @@ public class AdminInterface extends UserInterface
      */
      public void run() throws ExitProgramException, InterfaceTransitionException
      {
-          System.out.println("Launching Admin Interface");
+          System.out.println("** Launching Admin Interface");
           printUsage();
           while(true)
           {
