@@ -62,7 +62,7 @@ public class GuestInterface extends UserInterface
                // If the credentials failed, make them the Guest user
                // by leaving account == null
                if (account == null) {
-                    System.out.println("Invalid credentials, continuing as user Guest");
+                    System.out.println("** Invalid credentials, continuing as user Guest");
                }
                else
                {

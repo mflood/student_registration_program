@@ -25,7 +25,7 @@ public abstract class UserInterface
           If they don't type anything,
           it prompts them again
      */
-     public String getInput(String prompt)
+     protected String getInput(String prompt)
      {
           String returnValue = null;
           do
@@ -43,7 +43,7 @@ public abstract class UserInterface
           for input and converts the
           value to an int
      */
-     public int getIntInput(String prompt)
+     protected int getIntInput(String prompt)
      {
           System.out.print(prompt);
           String text = getNextCommand();
@@ -56,7 +56,7 @@ public abstract class UserInterface
           for input and converts the
           value to an date
      */
-     public Date getDateInput(String prompt)
+     protected Date getDateInput(String prompt)
      {
           System.out.print(prompt);
           String text = getNextCommand();
@@ -73,7 +73,7 @@ public abstract class UserInterface
      /**
           Reads a line from stdin
      */
-     public String getNextCommand()
+     protected String getNextCommand()
      {
           String command = this.scanner.nextLine();
           return command.trim();

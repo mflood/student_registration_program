@@ -17,7 +17,6 @@ public class ProgramMain
      static final String COURSES_FILEPATH = "./courses.dat";
      static final String REGISTRATIONS_FILEPATH = "./registrations.dat";
 
-
      /**
           Main entrypoint
      */
@@ -38,15 +37,23 @@ public class ProgramMain
           RegistrationService registrationService = new RegistrationService(REGISTRATIONS_FILEPATH);
           registrationService.load();
 
+          // This represents the person using the system
+          //
           Account account = null;
+
           while (true)
           {
-               // Create a user interface and run it
+               // Create a user interface, configure it, and run it
                //
-               UserInterface userInterface = getUserInterface(account);
+               UserInterface userInterface = UserInterfaceFactory.getUserInterface(account);
+
+               // Using these mutators instead of passing these as args to getUserInterface
+               // to avoid unneccessary complication of the UserInterfaceFactory
+               //
                userInterface.setAccountManager(accountManager);
                userInterface.setCourseManager(courseManager);
                userInterface.setRegistrationService(registrationService);
+
                try
                {
                     userInterface.run();
@@ -59,35 +66,6 @@ public class ProgramMain
                {
                     break;
                }
-          }
-     }
-
-     /**
-          Factory method to return an implementation
-          of UserInterface based on properties of the account
-          - If account is null: returns GuestInterface
-          - If role is admin: returns AdminInterface
-          - If role is student: returns StudentInterface
-          - If role is neither: returns GuestInterface
-     */
-     public static UserInterface getUserInterface(Account account)
-     {
-          if (account == null)
-          {
-               return new GuestInterface();
-          }
-          else if (account.hasRole("admin"))
-          {
-               return new AdminInterface(account);
-          }
-          else if (account.hasRole("student"))
-          {
-               return new StudentInterface(account);
-          }
-          else
-          {
-               System.out.println("Strange... Your account does not have any privileges");
-               return new GuestInterface();
           }
      }
 }

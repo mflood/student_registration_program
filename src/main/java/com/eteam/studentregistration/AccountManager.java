@@ -96,7 +96,7 @@ public class AccountManager
                // Create guest account
                // Empty password means you cannot log into the account
                // Presence of account means no one can create an account with username of guest
-               System.out.println("Creating guest account with username 'admin' and password ''");
+               System.out.println("Creating guest account with username 'guest' and password ''");
                createAccount("guest", "-", "-", "", "");
           }
           catch (AccountAlreadyExistsException e)
