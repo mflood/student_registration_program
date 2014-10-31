@@ -113,7 +113,7 @@ public class GuestInterface extends UserInterface
      */
      public void run() throws ExitProgramException, InterfaceTransitionException
      {
-          System.out.println("Launching Guest Interface");
+          System.out.println("** Launching Guest Interface");
           printUsage();
 
           while(true)
