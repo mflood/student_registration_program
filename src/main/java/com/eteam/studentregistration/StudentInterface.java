@@ -62,7 +62,7 @@ public class StudentInterface extends UserInterface
           }
 
           this.registrationService.unregister(this.account.getUsername(), sessionHash);
-
+          System.out.println("** You have successfully unregistered from Course " + courseId + ", Session " + sessionCode);
      }
 
      /**
@@ -141,6 +141,7 @@ public class StudentInterface extends UserInterface
           }
 
           this.registrationService.register(this.account.getUsername(), courseId, courseSession.getSessionCode());
+          System.out.println("** You have successfully registered for Course " + courseId + ", Session " + courseSession.getSessionCode());
      }
 
      /**
