@@ -59,12 +59,15 @@ public abstract class UserInterface
      protected Date getDateInput(String prompt)
      {
           System.out.print(prompt);
-          String text = getNextCommand();
+          System.out.print("\n");
+          int year = getIntInput("Enter the Year (YYYY): ");
+          int month = getIntInput("Enter the Month (1-12): ");
+          int day = getIntInput("Enter the Day (1-31): ");
 
           Calendar cal = Calendar.getInstance();
-          cal.set(Calendar.YEAR, 2014);
-          cal.set(Calendar.MONTH, 10);
-          cal.set(Calendar.DAY_OF_MONTH, 1);
+          cal.set(Calendar.YEAR, year);
+          cal.set(Calendar.MONTH, month);
+          cal.set(Calendar.DAY_OF_MONTH, day);
           Date date = cal.getTime();
 
           return date;

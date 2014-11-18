@@ -47,24 +47,30 @@ public class SampleDataLoader
                Date springStartDate = cal.getTime();
 
 
-               // Add Winter 2014 Sessions to some, but not all of the courses
-               //
-               courseManager.addSessionToCourse("JAVA101", "WIN14", fallStartDate, 30);
-               courseManager.addSessionToCourse("OSX101", "WIN14", fallStartDate, 30);
-               courseManager.addSessionToCourse("CLOUD101", "WIN14", fallStartDate, 30);
-               courseManager.addSessionToCourse("WAT101", "WIN14", fallStartDate, 30);
-               courseManager.addSessionToCourse("GL101", "WIN14", fallStartDate, 30);
-               courseManager.addSessionToCourse("LIFE101", "WIN14", fallStartDate, 10);
-               courseManager.addSessionToCourse("NUT101", "WIN14", fallStartDate, 20);
+               try
+               {
+                    // Add Winter 2014 Sessions to some, but not all of the courses
+                    //
+                    courseManager.addSessionToCourse("JAVA101", "WIN14", fallStartDate, 30);
+                    courseManager.addSessionToCourse("OSX101", "WIN14", fallStartDate, 30);
+                    courseManager.addSessionToCourse("CLOUD101", "WIN14", fallStartDate, 30);
+                    courseManager.addSessionToCourse("WAT101", "WIN14", fallStartDate, 30);
+                    courseManager.addSessionToCourse("GL101", "WIN14", fallStartDate, 30);
+                    courseManager.addSessionToCourse("LIFE101", "WIN14", fallStartDate, 10);
+                    courseManager.addSessionToCourse("NUT101", "WIN14", fallStartDate, 20);
 
-               // Create a few Spring 2015 sessions, with variations on capacity
-               //
-               courseManager.addSessionToCourse("GAME102", "SPR15", springStartDate, 10);
-               courseManager.addSessionToCourse("OSX102", "SPR15", springStartDate, 5);
-               courseManager.addSessionToCourse("JAVA102", "SPR15", springStartDate, 30);
-               courseManager.addSessionToCourse("WAT101", "SPR15", springStartDate, 5);
-               courseManager.addSessionToCourse("NUT101", "SPR15", springStartDate, 25);
-
+                    // Create a few Spring 2015 sessions, with variations on capacity
+                    //
+                    courseManager.addSessionToCourse("GAME102", "SPR15", springStartDate, 10);
+                    courseManager.addSessionToCourse("OSX102", "SPR15", springStartDate, 5);
+                    courseManager.addSessionToCourse("JAVA102", "SPR15", springStartDate, 30);
+                    courseManager.addSessionToCourse("WAT101", "SPR15", springStartDate, 5);
+                    courseManager.addSessionToCourse("NUT101", "SPR15", springStartDate, 25);
+               }
+               catch(CourseSessionAlreadyExistsException e)
+               {
+                    System.out.println(e);
+               }
 
                // Create 50 Students
                //

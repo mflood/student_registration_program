@@ -124,7 +124,7 @@ public class CourseManager
           Creates a new session and adds it to the course identified by courseId
           If it fails, it prints a message to the screen explaining the failure
      */
-     public void addSessionToCourse(String courseId, String sessionCode, Date startDate, int studentCapacity)
+     public void addSessionToCourse(String courseId, String sessionCode, Date startDate, int studentCapacity) throws CourseSessionAlreadyExistsException
      {
           // find the course and make sure it exists
           Course course = this.getCourse(courseId);
@@ -145,7 +145,7 @@ public class CourseManager
           }
           catch (CourseSessionAlreadyExistsException e)
           {
-               System.out.println(e);
+               throw e;
           }
      }
 

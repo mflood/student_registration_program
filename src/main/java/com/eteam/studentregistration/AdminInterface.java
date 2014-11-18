@@ -96,7 +96,15 @@ public class AdminInterface extends UserInterface
           int capacity = getIntInput("Enter new session student capacity> ");
           Date startDate = getDateInput("Enter session start date> ");
 
-          this.courseManager.addSessionToCourse(courseId, code, startDate, capacity);
+          try
+          {
+               this.courseManager.addSessionToCourse(courseId, code, startDate, capacity);
+               System.out.println("** Session " + code + " added to course " + courseId);
+          }
+          catch (CourseSessionAlreadyExistsException e)
+          {
+               System.out.println(e);
+          }
      }
 
      /**
